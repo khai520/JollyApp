@@ -1,8 +1,8 @@
 @echo off
 echo Đang khởi động Admin.exe và ViewAPI.exe...
 
-start "" ".\Jolly\Admin.exe"
-start "" ".\Jolly\ViewAPI.exe"
+start "" ".\Admin.exe"
+start "" ".\ViewAPI.exe"
 
 timeout /t 10 >nul  REM ⏳ Đợi 10 giây cho app khởi động (tuỳ chỉnh nếu cần)
 
