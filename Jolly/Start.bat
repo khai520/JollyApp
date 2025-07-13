@@ -7,6 +7,6 @@ start "" ".\ViewAPI.exe"
 timeout /t 10 >nul  REM ⏳ Đợi 10 giây cho app khởi động (tuỳ chỉnh nếu cần)
 
 echo Mở trình duyệt...
-start "" "https://localhost:7041"
+start "" "https://localhost:6000"
 
 exit
