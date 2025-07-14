@@ -348,10 +348,6 @@ input[type="text"] {
     width: 16rem;
 }
 
-/* ===== TABLE ===== */
-.overflow-x-auto {
-    overflow-x: auto;
-}
 
 table {
     width: 100%;
