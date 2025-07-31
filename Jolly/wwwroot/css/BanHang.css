@@ -62,7 +62,7 @@
 
     .order-tab .order-qty-badge {
         position: static;
-        background: #ff9800;
+        background: #667eea;
         color: #fff;
         font-size: 13px;
         font-weight: 600;
@@ -81,8 +81,8 @@
 
     .order-tab.active {
         background: #fff;
-        color: #ff9800;
-        border-color: #ff9800 #ff9800 #fff #ff9800;
+        color: #667eea;
+        border-color: #667eea #667eea #fff #667eea;
         z-index: 2;
         box-shadow: 0 4px 16px rgba(255, 152, 0, 0.08);
     }
@@ -112,7 +112,7 @@
 
 .create-order-btn {
     margin-left: auto;
-    background: #ff9800;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -124,7 +124,7 @@
 }
 
     .create-order-btn:hover {
-        background: #ffa726;
+        background: linear-gradient(135deg, #95a8fb, #a47ecb);
     }
 
 .order-actions {
@@ -137,7 +137,7 @@
 .order-list-title {
     font-weight: 500;
     font-size: 17px;
-    color: #ff9800;
+    color: #667eea;
 }
 
 .order-actions-buttons {
@@ -148,8 +148,8 @@
 .qr-btn,
 .add-btn {
     background: #fff;
-    border: 1px solid #ff9800;
-    color: #ff9800;
+    border: 1px solid #667eea;
+    color: #667eea;
     border-radius: 6px;
     padding: 8px 16px;
     font-weight: 500;
@@ -162,7 +162,7 @@
 
     .qr-btn:hover,
     .add-btn:hover {
-        background: #ff9800;
+        background: linear-gradient(135deg, #667eea, #764ba2);
         color: #fff;
     }
 
@@ -256,9 +256,9 @@
     .order-qty button {
         width: 28px;
         height: 28px;
-        border: 1px solid #ff9800;
+        border: 1px solid #667eea;
         background: #fff;
-        color: #ff9800;
+        color: #667eea;
         border-radius: 4px;
         cursor: pointer;
         display: flex;
@@ -269,7 +269,7 @@
     }
 
         .order-qty button:hover {
-            background: #ff9800;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: #fff;
         }
 
@@ -461,7 +461,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #ff9800;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: #fff;
     display: flex;
     align-items: center;
@@ -498,7 +498,7 @@
     }
 
     .customer-details .address-count {
-        color: #ff9800;
+        color: #667eea;
         font-size: 12px;
         font-weight: 500;
         margin-top: 2px;
@@ -689,11 +689,11 @@
 .customer-title {
     font-size: 18px;
     font-weight: 500;
-    color: #ff9800;
+    color: #667eea;
 }
 
 .choose-customer-btn {
-    background: #ff9800;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -704,7 +704,7 @@
 }
 
     .choose-customer-btn:hover {
-        background: #ffa726;
+        background: linear-gradient(135deg, #95a8fb, #a47ecb);
     }
 
 .order-footer {
@@ -783,7 +783,7 @@
 
 .customer-name {
     font-weight: 600;
-    color: #ff9800 !important;
+    color: #667eea !important;
 }
 
 .type-badge {
@@ -845,9 +845,9 @@ datalist {
             outline: 0 none;
         }
 
-    .order-info {
-        flex: 1;
-    }
+.order-info {
+    flex: 1;
+}
 
     .order-info label {
         font-weight: 500;
@@ -941,7 +941,7 @@ datalist {
     position: absolute;
     top: -10px;
     right: 5px;
-    background: #ff9800;
+    background: #667eea;
     color: #fff;
     font-size: 12px;
     font-weight: 600;
@@ -973,8 +973,8 @@ datalist {
 
 .confirm-btn {
     background: #fff;
-    color: #ff9800;
-    border: 2px solid #ff9800;
+    color: #667eea;
+    border: 2px solid #667eea;
     border-radius: 6px;
     padding: 12px 24px;
     font-size: 16px;
@@ -986,7 +986,7 @@ datalist {
 }
 
     .confirm-btn:hover {
-        background: #ff9800;
+        background: #667eea;
         color: #fff;
     }
 
@@ -1068,4 +1068,21 @@ datalist {
     .customer-info-row select:focus {
         border-color: #2196f3;
         background: #f5faff;
+    }
+.donggoi-tabs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px; 
+    -webkit-overflow-scrolling: touch;
+}
+
+    .donggoi-tabs::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .donggoi-tabs::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
     }
