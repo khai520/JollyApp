@@ -44,6 +44,8 @@
 }
 
 .product-card p {
+    height: 50px;
+    overflow: hidden;
     color: #666;
     margin-bottom: 1.5rem;
     line-height: 1.6;
