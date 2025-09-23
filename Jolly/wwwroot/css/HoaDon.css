@@ -265,7 +265,7 @@
     font-weight: 500;
     transition: all 0.3s ease;
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     min-width: 100px;
 }
 
@@ -644,7 +644,7 @@
     font-weight: 600;
     transition: all 0.3s ease;
     display: block;
-    margin: 24px auto 0;
+    /* margin: 24px auto 0; */
     min-width: 120px;
 }
 
@@ -848,4 +848,376 @@
     background: #fffaf0;
     border-color: #f6d55c;
     color: #744210;
+}
+/* CSS cho các nút trả hàng */
+.btn-return {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 4px;
+    min-width: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-return::before {
+        content: '↵';
+        margin-right: 4px;
+        font-weight: bold;
+    }
+
+    .btn-return:hover {
+        background: linear-gradient(135deg, #ee5a52, #dc3545);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(238, 90, 82, 0.4);
+    }
+
+    .btn-return:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 6px rgba(238, 90, 82, 0.3);
+    }
+
+/* Nút trả hàng trong modal */
+.btn-return-modal {
+    background: linear-gradient(135deg, #ff4757, #ff3838);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    min-width: 120px;
+    position: relative;
+}
+
+    .btn-return-modal::before {
+        content: '🔄';
+        margin-right: 6px;
+    }
+
+    .btn-return-modal:hover {
+        background: linear-gradient(135deg, #ff3838, #ff2f2f);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(255, 71, 87, 0.4);
+    }
+
+/* Checkbox cho việc chọn sản phẩm trả */
+.return-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ff6b6b;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    margin-right: 12px;
+}
+
+    .return-checkbox:checked {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+        border-color: #ee5a52;
+    }
+
+        .return-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+    .return-checkbox:hover {
+        border-color: #ee5a52;
+        box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+    }
+
+/* Input số lượng trả */
+.return-quantity-input {
+    width: 70px;
+    padding: 4px 8px;
+    border: 2px solid #ff6b6b;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    color: #ff6b6b;
+    transition: all 0.3s ease;
+    margin-left: 8px;
+}
+
+    .return-quantity-input:focus {
+        outline: none;
+        border-color: #ee5a52;
+        box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+    }
+
+    .return-quantity-input::-webkit-outer-spin-button,
+    .return-quantity-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    .return-quantity-input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+/* Container cho chế độ trả hàng */
+.return-mode-container {
+    background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+    border: 2px dashed #ff6b6b;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px 0;
+    position: relative;
+}
+
+    .return-mode-container::before {
+        content: '🔄 CHỌN SẢN PHẨM TRẢ HÀNG';
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        background: #fff;
+        padding: 4px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #ff6b6b;
+        letter-spacing: 0.5px;
+    }
+
+/* Highlight cho sản phẩm được chọn trả */
+.item-row.selected-for-return {
+    background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+    border: 2px solid #ff6b6b;
+    border-radius: 8px;
+    position: relative;
+}
+
+    .item-row.selected-for-return::after {
+        content: 'ĐƯỢC CHỌN TRẢ';
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: #ff6b6b;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+/* Badge cho trạng thái trả hàng */
+.badge-returned {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+    .badge-returned::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+        animation: shimmer 2s infinite;
+    }
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Thông báo trả hàng */
+.return-notice {
+    background: linear-gradient(135deg, #fff9e6, #fff0cc);
+    border-left: 4px solid #ff9800;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+    position: relative;
+}
+
+    .return-notice::before {
+        content: '⚠️';
+        margin-right: 8px;
+        font-size: 16px;
+    }
+
+.return-notice-text {
+    font-weight: 500;
+    color: #e65100;
+}
+
+/* Hiệu ứng loading cho nút trả hàng */
+.btn-return.loading {
+    position: relative;
+    color: transparent;
+}
+
+    .btn-return.loading::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -8px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+    }
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .btn-return {
+        padding: 4px 8px;
+        font-size: 11px;
+        min-width: 70px;
+    }
+
+    .btn-return-modal {
+        padding: 8px 16px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+
+    .return-quantity-input {
+        width: 60px;
+        padding: 3px 6px;
+    }
+
+    .return-mode-container {
+        padding: 12px;
+        margin: 12px 0;
+    }
+
+    .return-checkbox {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+}
+
+/* Trạng thái disabled cho nút trả hàng */
+.btn-return:disabled,
+.btn-return-modal:disabled {
+    background: linear-gradient(135deg, #ccc, #bbb);
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.6;
+}
+
+    .btn-return:disabled:hover,
+    .btn-return-modal:disabled:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+/* Hiệu ứng success sau khi trả hàng thành công */
+.return-success {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 16px 0;
+    color: #155724;
+    font-weight: 600;
+    text-align: center;
+    animation: slideInSuccess 0.5s ease-out;
+}
+
+    .return-success::before {
+        content: '✅';
+        margin-right: 8px;
+    }
+
+@keyframes slideInSuccess {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tooltip cho các nút trả hàng */
+.btn-return[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-bottom: 4px;
+}
+
+.btn-return[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+.btn-danger1 
+{
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: block;
+    min-width: 120px;
+}
+.ccc 
+{
+
+    display: flex;
+
+    justify-self: center;
 }
